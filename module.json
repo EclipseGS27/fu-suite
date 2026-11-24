@@ -1,0 +1,51 @@
+{
+  "id": "fu-suite",
+  "title": "Fabula Ultima Suite",
+  "description": "Installs the whole family of Fabula Ultima modules for Project FU in one go (Battle UI, Victory Screen, Shop & Economy, Projects & Downtime, Advanced Class Mechanics, Combat Simulator, Encounter Builder, Character Creator, plus the optional Battle Animations, Living Sprites and HD-2D look), and gathers their buttons into one Fabula Ultima launcher.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "George Sowidan"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "projectfu",
+        "type": "system",
+        "compatibility": {
+          "minimum": "4.14.0"
+        }
+      }
+    ],
+    "requires": [
+      { "id": "fu-battle-ui", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-battle-ui/releases/latest/download/module.json" },
+      { "id": "fu-victory", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-victory/releases/latest/download/module.json" },
+      { "id": "fu-shopmenu", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-shopmenu/releases/latest/download/module.json" },
+      { "id": "fu-projects", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-projects/releases/latest/download/module.json" },
+      { "id": "fu-class-mechanics", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-class-mechanics/releases/latest/download/module.json" },
+      { "id": "fu-combat-simulator", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-combat-simulator/releases/latest/download/module.json" },
+      { "id": "fu-encounter-builder", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-encounter-builder/releases/latest/download/module.json" },
+      { "id": "fu-character-creator", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-character-creator/releases/latest/download/module.json" }
+    ],
+    "recommends": [
+      { "id": "fu-animations", "type": "module", "manifest": "https://raw.githubusercontent.com/EclipseGS27/fu-animations/main/module.json", "reason": "Pixel-art battle animations for every ability, spell and attack." },
+      { "id": "living-sprites", "type": "module", "manifest": "https://github.com/EclipseGS27/fu-living-sprites/releases/latest/download/module.json", "reason": "Tokens that breathe, walk and react to damage and healing." },
+      { "id": "fu-hd2d", "type": "module", "manifest": "https://github.com/EclipseGS27/Hd2d/releases/latest/download/module.json", "reason": "The HD-2D look: depth of field, bloom, light shafts and color grading for your scenes." }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/suite.css"
+  ],
+  "url": "https://github.com/EclipseGS27/fu-suite",
+  "manifest": "https://github.com/EclipseGS27/fu-suite/releases/latest/download/module.json",
+  "download": "https://github.com/EclipseGS27/fu-suite/releases/download/v1.0.0/fu-suite.zip",
+  "bugs": "https://github.com/EclipseGS27/fu-suite/issues"
+}

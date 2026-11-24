@@ -1,0 +1,35 @@
+@font-face { font-family: 'FUSU Antonio'; src: url('../fonts/antonio-latin-400-normal.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'FUSU Antonio'; src: url('../fonts/antonio-latin-700-normal.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'FUSU PT Sans'; src: url('../fonts/pt-sans-latin-400-normal.woff2') format('woff2'); font-weight: 400; }
+
+.fusu {
+	--bg: #0b1424; --panel: rgba(19, 32, 58, 0.92); --line: rgba(159, 208, 255, 0.35); --line2: rgba(159, 208, 255, 0.15);
+	--ink: #eef3ff; --ink2: rgba(238, 243, 255, 0.72); --ink3: rgba(238, 243, 255, 0.45); --gold: #f2c45a;
+	--disp: 'FUSU Antonio', 'Antonio', sans-serif; --text: 'FUSU PT Sans', 'PT Sans', sans-serif;
+}
+.fusu .window-content { padding: 0; background: radial-gradient(120% 90% at 20% 0%, #1b2c4d 0%, var(--bg) 60%); color: var(--ink); font-family: var(--text); font-size: 14px; }
+.fusu .window-header { background: var(--bg); color: var(--ink); border-bottom: 1px solid var(--line2); }
+.fusu-body { display: flex; flex-direction: column; gap: 14px; padding: 12px 14px; min-height: 100%; }
+.fusu h2 { margin: 0 0 8px; border: 0; font-family: var(--disp); font-weight: 400; font-size: 17px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.fusu .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.fusu .card { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: var(--panel); border: 1px solid var(--line2); border-radius: 6px; }
+.fusu .card:hover { border-color: var(--line); }
+.fusu .card.missing, .fusu .card.off { opacity: 0.75; border-style: dashed; }
+.fusu .card header { display: flex; align-items: center; gap: 10px; }
+.fusu .card header > i { width: 32px; height: 32px; display: grid; place-items: center; font-size: 17px; color: var(--gold); background: rgba(242, 196, 90, 0.12); border-radius: 50%; flex: none; }
+.fusu .card header b { display: block; font-family: var(--disp); font-weight: 400; font-size: 18px; letter-spacing: 0.03em; }
+.fusu .card header small { color: var(--ink3); font-size: 11px; }
+.fusu .card header .tag { margin-left: auto; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink3); border: 1px solid var(--line2); border-radius: 3px; padding: 0 5px; }
+.fusu .card p { margin: 0; color: var(--ink2); font-size: 13px; line-height: 1.35; flex: 1; }
+.fusu .card .note { font-size: 12px; color: var(--ink3); }
+.fusu .acts { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.fusu button { width: auto; flex: none; font-family: var(--text); font-size: 12px; color: var(--ink); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--line2); border-radius: 3px; line-height: 1.2; padding: 4px 8px; cursor: pointer; }
+.fusu button:hover:not([disabled]) { border-color: var(--line); background: rgba(90, 169, 255, 0.15); box-shadow: none; }
+.fusu button[disabled] { opacity: 0.4; cursor: default; }
+.fusu button.cta { border-color: rgba(242, 196, 90, 0.55); background: linear-gradient(90deg, rgba(242, 196, 90, 0.22), rgba(242, 196, 90, 0.06)); }
+.fusu button.cog { margin-left: auto; }
+.fusu footer { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 8px; border-top: 1px solid var(--line2); color: var(--ink2); font-size: 12px; }
+.fusu footer .chk { display: flex; align-items: center; gap: 6px; }
+.fusu footer .sp { flex: 1; }
+.fusu footer small { color: var(--ink3); }
+.fusu .empty { color: var(--ink3); }
